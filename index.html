@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="[160 max-char]">
+    <meta name="author" content="[developer name]">
+    <title></title>
+<!-- Font Awesome -->
+<link 
+    rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+/>
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<main>
+    <section class="train-schedule-title">
+        <h1>Train Schedule</h1>
+        <p>It's the Gold Stallion Station</p>
+        <p>All aboard to infinity & …</p>
+    </section>
+    <section class="train-schedule">
+        <h2>Current Train Schedule</h2>
+        <table class="view-train-schedule">
+            <thead>
+                <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Arrival</th> <!-- next train time -->
+                    <th>ETA</th> <!-- minutes to arrival -->
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody class="train-schedule-list">
+                <tr>
+                    <td>-----</td>
+                    <td>-----</td>
+                    <td>--min</td>
+                    <td>--:--</td>
+                    <td>--min</td>
+                    <td>
+                        <button>
+                            <i class="fas fa-pencil-alt"></i>
+                        </button>
+                        <button>
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="add-trains">
+        <h2>Add TRAINS Here</h2>
+        <form class="input-train-form">
+
+            <label for="train-name">Train Name</label>
+            <input type="text" name="train-name"
+                   class="train-name-input" placeholder="enter name" required>
+            <br>
+            <label for="destination">Destination</label>
+            <input type="text" name="destination"
+                   class="destination-input" placeholder="enter location" required>
+            <br>
+
+            <label for="first-train-time">First Train Time</label>
+            <input type="text" name="first-train-time" class="first-train-time-input"
+                   placeholder="0000 - 2400" min="0" max="2400" step="30" required>
+            <br>
+            <label for="frequency">Frequency (min)</label>
+            <input type="number" name="frequency" class="frequency-input"
+                   placeholder="01 - 60" min="1" max="60" required>
+            <br>
+            <input type="submit" value="ADD TRAIN" class="submit-btn">
+        </form>
+    </section>
+</main>
+<!-- FireBase SDK -->
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-database.js"></script>
+
+<!-- JQuery CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Moment (Time) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<!-- JavaScript -->
+<script type="text/javascript" src="app.js"></script>
+<!-- <script type="text/javascript" src="app-2.js"></script> -->
+</body>
+</html>

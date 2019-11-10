@@ -1,0 +1,60 @@
+/* TODO:  *//* REVIEW:  *//* FIXME:  *//* SECTION:  *//* STUB:  *//* ANCHOR:  */
+/* NOTE:  *//* *: *//* !: *//* ?: */
+
+*, *::before, *::after {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    width: 100vw; height: 100vh; /* NOTE:  */
+    border: 2px solid black; /* NOTE:  */
+    font-family: sans-serif; /* NOTE:  */
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.train-schedule-title {
+    border: 2px solid black;
+    text-align: center;
+}
+
+section.train-schedule {
+    border: 2px solid black;
+}
+    th {
+        padding: 0 20px;
+    }
+    tr {
+        text-align: center;
+    }
+
+section.add-trains {
+    border: 2px solid black;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+label {
+    width: 120px;
+    display: inline-block;
+    /* text-align: center; */
+}
+h2 {
+    text-align: center;
+}
+
+.first-train-time-input,
+.frequency-input
+{
+    width: 35%;
+}
+
+.submit-btn {
+    border: 2px solid black;
+    width: 100%;
+}

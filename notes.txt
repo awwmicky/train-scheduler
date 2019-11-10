@@ -1,0 +1,90 @@
+< notes >
+
+= requirements =
+- adding trains specs
+	- train name
+	- destination
+	- First Train Time -- in military time
+	- Frequency -- in minutes
+- app calculates next train arrival
+	- relative to the current time
+	- (estimate time or arrival)
+- using firebase to store data
+	- users view from different PC browsers
+	- must be able to view same train schedule
+
+= Pseudo Code =
+- event listener
+	- fill form
+	- saves all information
+	- append to the DOM
+- moment.js
+	- takes snapshot of real world time
+	- use input time & relative time for difference for ETA
+	- convert time to interval time minutes 
+
+- firebase
+	- storing the time
+	- store information from form
+	- view information from DB to DOM
+
+
+= BONUS =
+- "minutes to arrival" & "next train time"
+- apdate & remove button
+- only sign people can edit
+
+
+= OTHER =
+- update Next Arrival in realtime
+- update ETA in realtime
+- if 0, then ARRIVED
+- convert military time to western time
+
+- convert input type time to number
+- apply min & max to input numbers
+
+===
+/* 
+e.g: example timer math
+- assume the first train time arrives at 8:00 AM
+- assume current time now is 7:30 AM
+- we know it's 30 min difference
+
+- confirm process that meets example test
+*/
+
+/* 
+- calculate minutes away & next arrival time
+- based on current time
+- how many minutes away is the next train?
+*/
+
+/*
+- Assume the following situation
+= test 1 = 
+- first train is of the day is 3:00 AM
+- assume the train comes every 3 minutes
+- assume the train current time is 3:16 AM
+- what time would the next train be???
+	- it would be 3:18 — 2 minutes away
+	- but how (in math)?
+= answer 1 =
+16 - 00 = 16 (first train time)
+16 % 3 = 1 (modulus/remainder) 
+3 - 1 = 2 (minutes away)
+2 + 3:16 = 3:18 (next train time)
+
+= test 2 =
+- first train is of the day is 3:00 AM
+- assume the train comes every 7 minutes
+- assume the train current time is 3:16 AM
+- what time would the next train be???
+	- it would be 3:21 — 5 minutes away
+	- but how (in math)?
+= answer 2 =
+16 - 00 = 16 (first train time)
+16 % 7 = 2 (modulus/remainder)
+7 - 2 = 5 (minutes away)
+5 + 3:16 = 3:21 (next train time)
+*/
