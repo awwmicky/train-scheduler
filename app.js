@@ -1,17 +1,6 @@
 /* -------------------------------------------------------------------------- */
 $(() => {
 /*  */
-const firebaseConfig = {
-    apiKey: "AIzaSyAl7tU6iaIP0Eba2Epo4MU1AI31RQPoE2I",
-    authDomain: "train-scheduler-2adc6.firebaseapp.com",
-    databaseURL: "https://train-scheduler-2adc6.firebaseio.com",
-    projectId: "train-scheduler-2adc6",
-    storageBucket: "train-scheduler-2adc6.appspot.com",
-    messagingSenderId: "807460258027",
-    appId: "1:807460258027:web:31c28f6eb7c9d6083ffeae"
-};
-
-firebase.initializeApp(firebaseConfig);
 // database snapshot
 const database = firebase.database();
 // console.log(database);
