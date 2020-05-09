@@ -5,5 +5,5 @@ firebase.initializeApp({
     projectId: "test-42315",
     storageBucket: "test-42315.appspot.com",
     messagingSenderId: "476193215394",
-    appId: "1:476193215394:web:ca1d60642c337f33c158fb"
+    appId: "1:476193215394:web:b9d998ac93ba54b9c158fb"
 });
